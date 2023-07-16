@@ -1,0 +1,16 @@
+/node_modules
+/vendor
+.idea
+.env*
+.DS_Store
+Thumbs.db
+.project
+/nbproject
+_ide_helper.php
+error.log
+npm-debug.log
+package-lock.json
+build/*
+build
+yarn.lock
+dist
