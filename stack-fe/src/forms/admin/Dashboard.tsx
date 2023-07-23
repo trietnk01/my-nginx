@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 
 const Dashboard = () => {
-	return <Box>Dashboard</Box>;
+	return <Box>Test Dashboard v3</Box>;
 };
 
 export default Dashboard;

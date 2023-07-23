@@ -1,18 +1,3 @@
-/*
-SQLyog Professional v13.1.1 (64 bit)
-MySQL - 10.4.24-MariaDB : Database - database_demo
-*********************************************************************
-*/
-
-/*!40101 SET NAMES utf8 */;
-
-/*!40101 SET SQL_MODE=''*/;
-
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`database_demo` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
 
 USE `database_demo`;
 
@@ -36,7 +21,7 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`id`,`email`,`password`,`name`,`phone`,`avatar`,`lang`,`currency`,`remember_token`) values 
-(1,'nguyenkimdien02@gmail.com','123456','Nguyễn Kim Điền','988162753','nguyen-kim-dien.png','vi','VND','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg3OTQ3NDA2LCJleHAiOjE2ODc5ODM0MDZ9.y3jBQZHmpvgau8saIUZu0MZvyORfEZ0qg_vIaAZt0Rs'),
+(1,'nguyenkimdien02@gmail.com','123456','Nguyễn Kim Điền','988162753','nguyen-kim-dien.png','vi','VND',NULL),
 (16,'tranthithusuong@dienkim.vn','123456','Trần Thị Thu Sương','902367851','paper-1.jpg','vi','VND',NULL),
 (17,'nguyenthihuong@dienkim.vn','123456','Nguyễn Thị Hương','901234567','paper-2.jpg','vi','VND',NULL),
 (18,'dothitrinh@dienkim.vn','123456','Đỗ Thị Trinh','956702341','paper-3.jpg','vi','VND',NULL),
