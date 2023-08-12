@@ -27,8 +27,7 @@ var debug = require("debug")("bookstore:server");
 /**
  * Get port from environment and store in Express.
  */
-
-var port = normalizePort(process.env.NODE_ENV === "development" ? 8001 : 8000);
+var port = 8000;
 app.set("port", port);
 var server = http.createServer(app);
 /**
