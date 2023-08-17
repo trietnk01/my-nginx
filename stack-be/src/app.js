@@ -27,7 +27,7 @@ var debug = require("debug")("bookstore:server");
 /**
  * Get port from environment and store in Express.
  */
-var port = 8000;
+var port = process.env.NODE_ENV === "development" ? process.env.PORT : 8000;
 app.set("port", port);
 var server = http.createServer(app);
 /**
@@ -57,22 +57,6 @@ server.on("listening", onListening);
 /**
  * Normalize a port into a number, string, or false.
  */
-
-function normalizePort(val) {
-	var port = parseInt(val, 10);
-
-	if (isNaN(port)) {
-		// named pipe
-		return val;
-	}
-
-	if (port >= 0) {
-		// port number
-		return port;
-	}
-
-	return false;
-}
 
 /**
  * Event listener for HTTP server "error" event.

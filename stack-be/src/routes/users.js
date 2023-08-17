@@ -41,11 +41,11 @@ router.post("/login", (req, res) => {
 					}
 				});
 			} else {
-				res.status(200).json({ status , process_env : process.env,dataLogin });
+				res.status(200).json({ status, process_env: process.env, dataLogin });
 			}
 		})
 		.catch(err => {
-			res.status(200).json({ status: false ,process_env : process.env , err});
+			res.status(200).json({ status: false, process_env: process.env, err });
 		});
 });
 router.post("/check-valid-token", (req, res) => {

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --exec babel-node src/app.js",
+	"dev":"cross-env NODE_ENV=development nodemon src/app.js",    
     "build-src": "babel src -d build --copy-files",
     "build": "node build/app.js"
   },
