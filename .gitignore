@@ -2,3 +2,4 @@
 ./stack-fe/node_modules
 ./stack-be/build
 ./stack-fe/build
+docker-compose.yaml
