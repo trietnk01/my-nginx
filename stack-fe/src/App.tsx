@@ -5,7 +5,6 @@ import LoadingSpinner from "ui-component/LoadingSpinner";
 import Locales from "ui-component/Locales";
 import Snackbar from "ui-component/Snackbar";
 const App = () => {
-	console.log("process.env.REACT_APP_BACKEND_URL = ", process.env.REACT_APP_BACKEND_URL);
 	return (
 		<Locales>
 			<AuthProvider>

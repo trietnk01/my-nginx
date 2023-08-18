@@ -6,7 +6,10 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
+var swaggerDocs = require("./helpers/swagger");
 require("module-alias/register");
+
+var port = process.env.NODE_ENV === "development" ? process.env.PORT : 8000;
 global.__IMAGES = path.join(__dirname, "public/images");
 global.__DOCUMENTS = path.join(__dirname, "public/documents");
 var apiRoute = require("@routes/api");
@@ -17,17 +20,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
-app.use("/api", apiRoute);
 
-app.get("*", function (req, res) {
-	res.sendFile("index.html", { root: path.join(__dirname, "public") });
-});
+app.use("/api", apiRoute);
 var debug = require("debug")("bookstore:server");
 
 /**
  * Get port from environment and store in Express.
  */
-var port = process.env.NODE_ENV === "development" ? process.env.PORT : 8000;
+
 app.set("port", port);
 var server = http.createServer(app);
 /**
@@ -49,7 +49,7 @@ io.on("connection", socket => {
 /**
  * Listen on provided port, on all network interfaces.
  */
-
+swaggerDocs(app, port);
 server.listen(port);
 server.on("error", onError);
 server.on("listening", onListening);

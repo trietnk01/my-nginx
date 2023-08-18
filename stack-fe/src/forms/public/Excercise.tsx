@@ -83,9 +83,6 @@ const Excercise = () => {
 							);
 						}}
 					/>
-					<Button type="submit" variant="contained" startIcon={<SendTwoToneIcon />}>
-						{t("Submit")}
-					</Button>
 					{data.length ? (
 						<TableContainer>
 							<Table>
